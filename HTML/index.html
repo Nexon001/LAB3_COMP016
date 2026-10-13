@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Casa Luna | Caffè &amp; Cucina Italiana</title>
+  <meta name="description" content="Handmade pasta, honest espresso, and Italian comfort served fresh every day.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+  <p class="topbar">Fresh pasta, slow mornings, good company</p>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="index.html" aria-label="Casa Luna home">
+      <svg class="brand-mark" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true">
+        <path d="M31 5a19 19 0 1 0 0 38 16 16 0 1 1 0-38z" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M22 38c2-10 8-17 18-21-1 10-7 18-18 21zM22 38c-1-6 1-11 5-15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">Casa Luna</span>
+        <span class="brand-sub">Caffè · Cucina Italiana</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">Menu</button>
+
+    <nav class="main-nav" id="mainNav" aria-label="Main">
+      <ul>
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="index.html#story">Our Story</a></li>
+        <li><a href="index.html#visit">Visit Us</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn btn-primary order-btn" id="orderNowBtn" href="order.html">Order now <span class="cart-count" id="cartCount">0</span></a>
+  </header>
+
+  <main id="main">
+
+    <section class="hero" id="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="eyebrow">Buon appetito</p>
+        <h1 id="heroTitle">A little taste of <em>Italy,</em> close to home.</h1>
+        <p class="hero-lead" id="heroLead">Handmade pasta, honest espresso, and Italian comfort served fresh every day.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="menu.html">Explore our menu</a>
+          <a class="link-btn" id="heroOrderBtn" href="order.html">Order now &rarr;</a>
+        </div>
+      </div>
+      <figure class="hero-media">
+        <img src="../Images/hero-pasta.jpg" alt="A rustic bowl of tagliatelle with tomato sauce, basil, and parmesan">
+      </figure>
+    </section>
+
+    <section class="values" aria-label="What we offer">
+      <ul>
+        <li class="value-item" id="valueFresh">
+          <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path d="M7 27c2-9 8-15 18-19-1 10-7 17-18 19zM7 27c-1-6 1-11 5-15" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span>Made fresh daily</span>
+        </li>
+        <li class="value-item" id="valueCoffee">
+          <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path d="M5 12h17v7a6 6 0 0 1-6 6h-5a6 6 0 0 1-6-6zM22 14h3a3 3 0 0 1 0 6h-3M4 28h20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          <span>Italian coffee &amp; pastries</span>
+        </li>
+        <li class="value-item" id="valueCozy">
+          <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><path d="M4 15 16 5l12 10M8 13v14h16V13M13 27v-8h6v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>A place to slow down</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" id="featured" aria-labelledby="featuredTitle">
+      <h2 class="section-title" id="featuredTitle">Something <em>delicious</em> is waiting.</h2>
+
+      <div class="menu-grid" id="featuredGrid">
+        <article class="menu-card" data-id="truffle-tagliatelle" data-name="Truffle Tagliatelle" data-price="420">
+          <img src="../Images/truffle-tagliatelle.jpg" alt="Tagliatelle with wild mushrooms and shaved parmesan" loading="lazy">
+          <div class="menu-card-body">
+            <div class="menu-card-row">
+              <h3>Truffle Tagliatelle</h3>
+              <p class="price">&#8369;420</p>
+            </div>
+            <p class="menu-desc">Fresh pasta, wild mushrooms, parmesan</p>
+            <button class="btn btn-small add-btn" type="button">Add to order</button>
+          </div>
+        </article>
+
+        <article class="menu-card" data-id="cappuccino-croissant" data-name="Cappuccino &amp; Croissant" data-price="220">
+          <img src="../Images/cappuccino-croissant.jpg" alt="A cappuccino with latte art beside a buttery croissant" loading="lazy">
+          <div class="menu-card-body">
+            <div class="menu-card-row">
+              <h3>Cappuccino &amp; Croissant</h3>
+              <p class="price">&#8369;220</p>
+            </div>
+            <p class="menu-desc">Rich espresso, velvety milk, buttery croissant</p>
+            <button class="btn btn-small add-btn" type="button">Add to order</button>
+          </div>
+        </article>
+
+        <article class="menu-card" data-id="margherita-pizza" data-name="Margherita Pizza" data-price="380">
+          <img src="../Images/margherita-pizza.jpg" alt="Wood-fired margherita pizza topped with basil" loading="lazy">
+          <div class="menu-card-body">
+            <div class="menu-card-row">
+              <h3>Margherita Pizza</h3>
+              <p class="price">&#8369;380</p>
+            </div>
+            <p class="menu-desc">San Marzano tomato, mozzarella, basil</p>
+            <button class="btn btn-small add-btn" type="button">Add to order</button>
+          </div>
+        </article>
+      </div>
+
+      <p class="section-cta"><a class="link-btn" href="menu.html">See the full menu &rarr;</a></p>
+    </section>
+
+    <section class="story" id="story" aria-labelledby="storyTitle">
+      <div class="story-inner">
+        <h2 id="storyTitle">Our story</h2>
+        <p>Casa Luna started with one pasta machine and a promise: nothing leaves the kitchen that we would not serve at our own table. We roll our dough each morning, pour every espresso by hand, and keep the doors open for anyone who needs an unhurried hour.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="visit">
+    <div class="footer-grid">
+      <section aria-labelledby="visitTitle">
+        <h2 id="visitTitle">Visit us</h2>
+        <address>
+          12 Via Luna Street<br>
+          Poblacion, Makati City
+        </address>
+      </section>
+      <section aria-labelledby="hoursTitle">
+        <h2 id="hoursTitle">Opening hours</h2>
+        <p>Mon – Fri: 7:00 AM – 9:00 PM<br>Sat – Sun: 8:00 AM – 10:00 PM</p>
+      </section>
+      <section aria-labelledby="contactTitle">
+        <h2 id="contactTitle">Say ciao</h2>
+        <p>hello@casaluna.example<br>(02) 8123 4567</p>
+      </section>
+    </div>
+    <p class="copyright">&copy; 2026 Casa Luna. Student project for COMP016.</p>
+  </footer>
+
+  <p class="toast" id="toast" role="status" aria-live="polite"></p>
+
+  <script src="../JS_Script/script.js"></script>
+</body>
+</html>

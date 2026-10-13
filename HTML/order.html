@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order | Casa Luna</title>
+  <meta name="description" content="Handmade pasta, honest espresso, and Italian comfort served fresh every day.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body class="order-page">
+
+  <p class="topbar">Fresh pasta, slow mornings, good company</p>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="index.html" aria-label="Casa Luna home">
+      <svg class="brand-mark" viewBox="0 0 48 48" width="44" height="44" aria-hidden="true">
+        <path d="M31 5a19 19 0 1 0 0 38 16 16 0 1 1 0-38z" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M22 38c2-10 8-17 18-21-1 10-7 18-18 21zM22 38c-1-6 1-11 5-15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">Casa Luna</span>
+        <span class="brand-sub">Caffè · Cucina Italiana</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">Menu</button>
+
+    <nav class="main-nav" id="mainNav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="index.html#story">Our Story</a></li>
+        <li><a href="index.html#visit">Visit Us</a></li>
+      </ul>
+    </nav>
+
+    <a class="btn btn-primary order-btn" id="orderNowBtn" href="order.html" aria-current="page">Order now <span class="cart-count" id="cartCount">0</span></a>
+  </header>
+
+  <main id="main">
+
+    <section class="page-head" aria-labelledby="orderTitle">
+      <p class="eyebrow">Order online</p>
+      <h1 id="orderTitle">Build your order, <em>see your total.</em></h1>
+      <p class="hero-lead">Add dishes on the left. Your order updates on the right as you go.</p>
+    </section>
+
+    <div class="order-layout">
+      <div class="order-menu">
+    <section class="menu-controls" aria-label="Filter the menu">
+      <div class="field-col">
+        <label for="categoryFilter">Category</label>
+        <select id="categoryFilter">
+          <option value="all">All dishes</option>
+          <option value="pasta">Pasta</option>
+          <option value="coffee">Coffee &amp; pastries</option>
+          <option value="pizza">Pizza</option>
+        </select>
+      </div>
+      <div class="field-col">
+        <label for="searchInput">Search</label>
+        <input type="search" id="searchInput" placeholder="Try &ldquo;basil&rdquo;" autocomplete="off">
+      </div>
+      <p class="hover-hint" id="hoverHint" role="status">Hover over a dish to see how to add it.</p>
+    </section>
+    <div class="section menu-page" id="menuGrid">
+      <section class="menu-section" id="section-pasta" data-category="pasta" aria-labelledby="title-pasta">
+        <h2 class="section-title section-title-left" id="title-pasta">Pasta</h2>
+        <p class="section-blurb">Rolled by hand each morning.</p>
+        <div class="menu-grid" id="grid-pasta">
+        <article class="menu-card" data-id="truffle-tagliatelle" data-name="Truffle Tagliatelle" data-price="420" data-category="pasta">
+          <img src="../Images/truffle-tagliatelle.jpg" alt="Tagliatelle with wild mushrooms and parmesan" loading="lazy">
+          <div class="menu-card-body">
+            <div class="menu-card-row">
+              <h3>Truffle Tagliatelle</h3>
+              <p class="price">&#8369;420</p>
+            </div>
+            <p class="menu-desc">Fresh pasta, wild mushrooms, parmesan</p>
+            <button class="btn btn-small add-btn" type="button">Add to order</button>
+          </div>
+        </article>
+        <article class="menu-card" data-id="tomato-pappardelle" data-name="Tomato Basil Pappardelle" data-price="380" data-category="pasta">
+          <img src="../Images/hero-pasta.jpg" alt="Pappardelle in tomato sauce with basil" loading="lazy">
+          <div class="menu-card-body">
+            <div class="menu-card-row">
+              <h3>Tomato Basil Pappardelle</h3>
+              <p class="price">&#8369;380</p>
+            </div>
+            <p class="menu-desc">Wide ribbons, slow tomato sauce, basil, parmesan</p>
+            <button class="btn btn-small add-btn" type="button">Add to order</button>
+          </div>
+        </article>
+        <article class="menu-card" data-id="creamy-carbonara" data-name="Creamy Carbonara" data-price="400" data-category="pasta">
+          <img src="../Images/truffle-tagliatelle.jpg" alt="Creamy pasta with pepper and parmesan" loading="lazy">
+          <div class="menu-card-body">
+            <div class="menu-card-row">
+              <h3>Creamy Carbonara</h3>
+              <p class="price">&#8369;400</p>
+            </div>
+            <p class="menu-desc">Egg yolk, pecorino, crisp guanciale, black pepper</p>
+            <button class="btn btn-small add-btn" type="button">Add to order</button>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section class="menu-section" id="section-coffee" data-category="coffee" aria-labelledby="title-coffee">
+        <h2 class="section-title section-title-left" id="title-coffee">Coffee &amp; pastries</h2>
+        <p class="section-blurb">Pulled slowly, baked early.</p>
+        <div class="menu-grid" id="grid-coffee">
+        <article class="menu-card" data-id="cappuccino-croissant" data-name="Cappuccino &amp; Croissant" data-price="220" data-category="coffee">
+          <img src="../Images/cappuccino-croissant.jpg" alt="Cappuccino with latte art beside a croissant" loading="lazy">
+          <div class="menu-card-body">
+            <div class="menu-card-row">
+              <h3>Cappuccino &amp; Croissant</h3>
+              <p class="price">&#8369;220</p>
+            </div>
+            <p class="menu-desc">Rich espresso, velvety milk, buttery croissant</p>
+            <button class="btn btn-small add-btn" type="button">Add to order</button>
+          </div>
+        </article>
+        <article class="menu-card" data-id="espresso-cornetto" data-name="Espresso &amp; Cornetto" data-price="190" data-category="coffee">
+          <img src="../Images/cappuccino-croissant.jpg" alt="Espresso served with a sweet Italian pastry" loading="lazy">
+          <div class="menu-card-body">
+            <div class="menu-card-row">
+              <h3>Espresso &amp; Cornetto</h3>
+              <p class="price">&#8369;190</p>
+            </div>
+            <p class="menu-desc">A short, strong espresso with a warm filled cornetto</p>
+            <button class="btn btn-small add-btn" type="button">Add to order</button>
+          </div>
+        </article>
+        <article class="menu-card" data-id="affogato" data-name="Affogato" data-price="240" data-category="coffee">
+          <img src="../Images/cappuccino-croissant.jpg" alt="Espresso poured over vanilla gelato" loading="lazy">
+          <div class="menu-card-body">
+            <div class="menu-card-row">
+              <h3>Affogato</h3>
+              <p class="price">&#8369;240</p>
+            </div>
+            <p class="menu-desc">Vanilla gelato drowned in a fresh double espresso</p>
+            <button class="btn btn-small add-btn" type="button">Add to order</button>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section class="menu-section" id="section-pizza" data-category="pizza" aria-labelledby="title-pizza">
+        <h2 class="section-title section-title-left" id="title-pizza">Pizza</h2>
+        <p class="section-blurb">Blistered in a wood-fired oven.</p>
+        <div class="menu-grid" id="grid-pizza">
+        <article class="menu-card" data-id="margherita-pizza" data-name="Margherita Pizza" data-price="380" data-category="pizza">
+          <img src="../Images/margherita-pizza.jpg" alt="Wood-fired margherita pizza with basil" loading="lazy">
+          <div class="menu-card-body">
+            <div class="menu-card-row">
+              <h3>Margherita Pizza</h3>
+              <p class="price">&#8369;380</p>
+            </div>
+            <p class="menu-desc">San Marzano tomato, mozzarella, basil</p>
+            <button class="btn btn-small add-btn" type="button">Add to order</button>
+          </div>
+        </article>
+        <article class="menu-card" data-id="quattro-formaggi" data-name="Quattro Formaggi" data-price="450" data-category="pizza">
+          <img src="../Images/margherita-pizza.jpg" alt="Four-cheese pizza with a blistered crust" loading="lazy">
+          <div class="menu-card-body">
+            <div class="menu-card-row">
+              <h3>Quattro Formaggi</h3>
+              <p class="price">&#8369;450</p>
+            </div>
+            <p class="menu-desc">Mozzarella, gorgonzola, fontina, parmesan</p>
+            <button class="btn btn-small add-btn" type="button">Add to order</button>
+          </div>
+        </article>
+        <article class="menu-card" data-id="prosciutto-rucola" data-name="Prosciutto e Rucola" data-price="480" data-category="pizza">
+          <img src="../Images/margherita-pizza.jpg" alt="Pizza topped with cured ham and arugula" loading="lazy">
+          <div class="menu-card-body">
+            <div class="menu-card-row">
+              <h3>Prosciutto e Rucola</h3>
+              <p class="price">&#8369;480</p>
+            </div>
+            <p class="menu-desc">Mozzarella, prosciutto, peppery rocket, shaved parmesan</p>
+            <button class="btn btn-small add-btn" type="button">Add to order</button>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <p class="no-results" id="noResults" hidden>Nothing matches that search. Try another word or choose All dishes.</p>
+    </div>
+      </div>
+
+    <aside class="cart-panel" id="cartPanel" aria-label="Your order">
+    <div class="cart-head">
+      <h2>Your order</h2>
+    </div>
+
+    <div class="cart-body" id="cartView">
+      <p class="cart-empty" id="cartEmpty">Your order is empty. Add something from the menu.</p>
+      <ul class="cart-items" id="cartItems"></ul>
+
+      <div class="cart-options" id="cartOptions">
+        <fieldset class="order-type" id="orderTypeGroup">
+          <legend>Order type</legend>
+          <label><input type="radio" name="orderType" id="typePickup" value="pickup" checked> Pickup</label>
+          <label><input type="radio" name="orderType" id="typeDineIn" value="dine-in"> Dine in</label>
+          <p class="note" id="orderTypeNote">Ready in about 15 minutes.</p>
+        </fieldset>
+
+        <div class="field-row">
+          <label for="tipSelect">Tip</label>
+          <select id="tipSelect">
+            <option value="0">No tip</option>
+            <option value="0.05">5%</option>
+            <option value="0.10">10%</option>
+            <option value="0.15">15%</option>
+          </select>
+        </div>
+
+        <div class="field-row">
+          <label for="promoInput">Promo code</label>
+          <div class="promo">
+            <input type="text" id="promoInput" placeholder="Try LUNA10" autocomplete="off">
+            <button class="btn btn-small btn-outline" id="applyPromoBtn" type="button">Apply</button>
+          </div>
+        </div>
+        <p class="note" id="promoMsg" role="status"></p>
+      </div>
+
+      <dl class="totals" id="totals">
+        <div><dt>Subtotal</dt><dd id="subtotalAmt">&#8369;0.00</dd></div>
+        <div id="discountRow" hidden><dt>Discount</dt><dd id="discountAmt">-&#8369;0.00</dd></div>
+        <div><dt>Tax (12%)</dt><dd id="taxAmt">&#8369;0.00</dd></div>
+        <div><dt>Tip</dt><dd id="tipAmt">&#8369;0.00</dd></div>
+        <div class="totals-final"><dt>Total</dt><dd id="totalAmt">&#8369;0.00</dd></div>
+      </dl>
+
+      <div class="field-col">
+        <label for="customerName">Name for the order</label>
+        <input type="text" id="customerName" placeholder="Your name" autocomplete="name">
+      </div>
+      <p class="form-error" id="formError" role="alert"></p>
+      <button class="btn btn-primary btn-block" id="placeOrderBtn" type="button">Place order</button>
+      <button class="link-btn clear-btn" id="clearCartBtn" type="button">Clear order</button>
+    </div>
+
+    <div class="cart-body confirmation" id="confirmView" hidden>
+      <h3 id="confirmTitle">Grazie!</h3>
+      <p id="confirmMsg"></p>
+      <ul class="confirm-list" id="confirmList"></ul>
+      <p class="confirm-total" id="confirmTotal"></p>
+      <button class="btn btn-primary btn-block" id="newOrderBtn" type="button">Start a new order</button>
+    </div>
+  </aside>
+    </div>
+
+  </main>
+
+  <footer class="site-footer" id="visit">
+    <div class="footer-grid">
+      <section aria-labelledby="visitTitle">
+        <h2 id="visitTitle">Visit us</h2>
+        <address>
+          12 Via Luna Street<br>
+          Poblacion, Makati City
+        </address>
+      </section>
+      <section aria-labelledby="hoursTitle">
+        <h2 id="hoursTitle">Opening hours</h2>
+        <p>Mon – Fri: 7:00 AM – 9:00 PM<br>Sat – Sun: 8:00 AM – 10:00 PM</p>
+      </section>
+      <section aria-labelledby="contactTitle">
+        <h2 id="contactTitle">Say ciao</h2>
+        <p>hello@casaluna.example<br>(02) 8123 4567</p>
+      </section>
+    </div>
+    <p class="copyright">&copy; 2026 Casa Luna. Student project for COMP016.</p>
+  </footer>
+
+  <button class="mobile-cart-bar" id="mobileCartBar" type="button">View order · 0 items · &#8369;0.00</button>
+
+  <p class="toast" id="toast" role="status" aria-live="polite"></p>
+
+  <script src="../JS_Script/script.js"></script>
+</body>
+</html>
